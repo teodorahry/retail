@@ -1,95 +1,542 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>Learning HTML</title>   
+        <title>Albatross</title>   
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-
+        <link rel="stylesheet" href="stylesheet.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+        <style>  
+            h4 {
+                color:#9e752b;
+            }
+            .peak {
+                grid-column:1/13;
+                z-index:1;
+                padding:20px 25px 0 25px;
+            }
+            .tested {
+                grid-column:1/13;
+                text-align:left;
+                padding:20px 25px 0 25px;
+            }
+            .large-text {
+                grid-column:1/13;
+                color:#eee;
+                font-size:70px;
+                text-align:center;
+                padding-top:50px;
+                line-height:120%;
+                text-transform:uppercase;
+                font-family: 'Work Sans', sans-serif;
+            }
+            .medium-text {
+                grid-column:1/13;
+                color:#eee;
+                font-size:50px;
+                text-align:center;
+                padding-top:8px;
+                line-height:120%;
+                text-transform:uppercase;
+                font-family: 'Work Sans', sans-serif;
+            }
+            .small-text {
+                grid-column:1/13;
+                color:#eee;
+                font-size:20px;
+                text-align:center;
+                padding-top:20px;
+                line-height:120%;
+                text-transform:uppercase;
+                font-family: 'Work Sans', sans-serif;
+           }
+           header {
+                height:300px;
+                color:white;
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+                background-position:center top;
+                background-size:cover;
+                background-image:url(images/hero-210.jpg); 
+            }
+            .bar {
+                grid-column:1/13;
+                border-top:solid 3px #de9727;
+                height:3px;
+                z-index:5;
+                position:fixed;
+                top:0;
+                width:100%;
+            }
+            .bar2 {
+                grid-column:1/13;
+                background-color:#de9727;
+                height:3px;
+                z-index:1;
+                margin:0;
+                padding:0;
+            }
+            .collection1 {
+                grid-column:1/13;
+                padding:20px 25px 0 25px;
+            }
+            .collection2 {
+                grid-column:1/13;
+                padding:20px 25px 0 25px;
+            }
+            .collection3 {
+                grid-column:1/13;
+                padding:20px 25px 0 25px;
+            }
+            .collection4 {
+                grid-column:1/13;
+                padding:20px 25px 0 25px;
+            }
+            .collection5 {
+                grid-column:1/13;
+                padding:20px 25px 0 25px;
+            }
+            .collection6 {
+                grid-column:1/13;
+                padding:20px 25px 0 25px;
+            }
+            .collection1 img {
+                border:1px solid rgba(62, 46, 17, 0.4);
+                padding:2px;
+            }
+            .collection2 img {
+                border:1px solid rgba(62, 46, 17, 0.4);;
+                padding:2px;
+            }
+            .collection3 img {
+                border:1px solid rgba(62, 46, 17, 0.4);;
+                padding:2px;
+            }
+            .collection4 img {
+                border:1px solid rgba(62, 46, 17, 0.4);;
+                padding:2px;
+            }
+            .collection5 img {
+                border:1px solid rgba(62, 46, 17, 0.4);;
+                padding:2px;
+            }
+            .collection6 img {
+                border:1px solid rgba(62, 46, 17, 0.4);;
+                padding:2px;
+            } 
+            .tried1 {
+                grid-column:1/13;
+                padding:20px 25px 0 25px;
+            }
+            .tried2 {
+                grid-column:1/13;
+                padding:20px 25px 0 25px;
+            }
+            .tried3 {
+                grid-column:1/13;
+                padding:20px 25px 0 25px;
+            }
+            .tried4 {
+                grid-column:1/13;
+                padding:20px 25px 0 25px;
+            }
+             .tried1 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:2px;
+            }
+            .tried2 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:2px;
+            }
+            .tried3 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:2px;
+            }
+            .tried4 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:2px;
+            }
+            .email {
+                grid-column:1/13;
+                padding:20px 25px 0 25px;
+            }
+            .test {
+                background:#9e752b;
+                height:.5px;
+                width:190px;
+                margin-bottom:40px;
+                }
+@media only screen and (min-width:768px) {
+            header {
+                height:400px;
+                color:white;
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+                background-position:center top;
+                background-size:cover;
+                background-image:url(images/hero.jpg); 
+            }
+            .large-text {
+                font-size:100px;
+                padding-top:60px;
+                line-height:120%;
+            }
+            .medium-text {
+                font-size:70px;
+                padding-top:8px;
+                line-height:120%;
+            }
+            .small-text {
+                font-size:30px;
+                padding-top:20px;
+                line-height:120%;
+            }
+            .peak {
+                grid-column:1/13;
+                z-index:1;
+                padding:20px 55px 0 50px;
+            }
+            .tested {
+                grid-column:1/13;
+                padding:20px 30px 0 50px;
+            }
+            .collection1 {
+                grid-column:1/7;
+                padding:20px 25px 0 50px;
+                font-size:10px;
+            }
+            .collection2 {
+                grid-column:7/13;
+                padding:20px 50px 0 25px;
+            }
+            .collection3 {
+                grid-column:1/7;
+                padding:20px 25px 0 50px;
+            }
+            .collection4 {
+                grid-column:7/13;
+                padding:20px 50px 0 25px;
+            }
+            .collection5 {
+                grid-column:1/7;
+                padding:20px 25px 0 50px;
+            }
+            .collection6 {
+                grid-column:7/13;
+                padding:20px 50px 0 25px;
+            }
+            .collection1 p, .collection2 p, .collection3 p, .collection4 p, .collection5 p, .collection6 p {
+                font-size:13px;
+            }
+            .tried1 {
+                grid-column:1/7;
+                padding:20px 25px 0 50px;
+            }
+            .tried2 {
+                grid-column:7/13;
+                padding:20px 50px 0 25px;
+            }
+            .tried3 {
+                grid-column:1/7;
+                padding:20px 25px 0 50px;
+            }
+            .tried4 {
+                grid-column:7/13;
+                padding:20px 50px 0 25px;
+            }
+            .tried1 p, .tried2 p, .tried3 p, .tried4 p {
+                font-size:13px;
+            }
+            .email {
+                grid-column:1/13;
+                padding:20px 25px 0 50px;
+            }
+    }
+@media only screen and (min-width:1200px) {
+            header {
+                height:530px;
+                color:white;
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+                background-position:center top;
+                background-size:cover;
+                background-image:url(images/hero.jpg); 
+            }
+            .collection1 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:1px;
+            }
+            .collection2 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:1px;
+            }
+            .collection3 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:1px;
+            }
+            .collection4 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:1px;
+            }
+            .collection5 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:1px;
+            }
+            .collection6 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:1px;
+            } 
+            .large-text {
+                grid-column:1/13;
+                color:#eee;
+                font-size:120px;
+                text-align:center;
+                padding-top:90px;
+                line-height:120%;
+                text-transform:uppercase;
+                font-family: 'Work Sans', sans-serif;
+            }
+            .medium-text {
+                grid-column:1/13;
+                color:#eee;
+                font-size:90px;
+                text-align:center;
+                padding-top:8px;
+                line-height:120%;
+                text-transform:uppercase;
+                font-family: 'Work Sans', sans-serif;
+            }
+            .small-text {
+                grid-column:1/13;
+                color:#eee;
+                font-size:50px;
+                text-align:center;
+                padding-top:20px;
+                line-height:120%;
+                text-transform:uppercase;
+                font-family: 'Work Sans', sans-serif;
+            }
+            .collection1 {
+                grid-column:1/5;
+                padding:30px 20px 0 50px;
+                font-size:10px;
+            }
+            .collection2 {
+                grid-column:5/9;
+                padding:30px 35px 0 35px;
+            }
+            .collection3 {
+                grid-column:9/13;
+                padding:30px 50px 0 20px;
+            }
+            .collection4 {
+                grid-column:1/5;
+                padding:40px 20px 0 50px;
+            }
+            .collection5 {
+                grid-column:5/9;
+                padding:40px 35px 0 35px;
+            }
+            .collection6 {
+                grid-column:9/13;
+                padding:40px 50px 0 20px;
+            }
+            .collection1 p, .collection2 p, .collection3 p, .collection4 p, .collection5 p, .collection6 p {
+                font-size:14px;
+            } 
+            .tried1 {
+                grid-column:1/7;
+            }
+            .tried2 {
+                grid-column:7/13;
+            }
+            .tried3 {
+                grid-column:1/7;
+            }
+            .tried4 {
+                grid-column:7/13;
+            }
+            .tried1 p, .tried2 p, .tried3 p, .tried4 p {
+                font-size:14px;
+            }
+            .tried1 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:2px;
+            }
+            .tried2 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:2px;
+            }
+            .tried3 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:2px;
+            }
+            .tried4 img {
+                border:1px solid rgba(62, 46, 17, 0.3);
+                padding:2px;
+            }
+            .footer-left {
+                grid-column:1/4;
+                padding:30px 0 30px 80px;
+            }
+            .footer-middle {
+                grid-column:4/7;
+                padding:30px 0 30px 40px;
+            }
+            .footer-middle-right {
+                grid-column:7/10;
+                padding:30px 0 30px 50px;
+            }
+            .footer-right {
+                grid-column:10/13;
+                padding:45px 0 0 0;
+            }
+            .footer-left p, .footer-middle p, .footer-middle-right p {
+                font-size:13px;
+            }
+    }
         </style>
     </head>
     <body>
-        <h1>Teodora Hryshchyshyn: Portfolio Redesign</h1>
-       
-        <h2>Overview</h2>
-        
-        <p>For my independent project, I plan to redesign and enhance my portfolio website on the Squarespace platform. I have previously created a couple of different portfolio websites, both a coded one and one built on WordPress. While I do have a Squarespace account and the beginnings of a portfolio website built there, there is much work to be done in regard to the information architecture, visual design, and usability of the website.</p>
-
-        <p>Developing a portfolio website on Squarespace not only allows me to develop technical skills for the Squarespace platform, but gives me the opportunity to showcase my work in one centralized location to future employers and to those curious about my projects. Prior to the interactive design concentration, I was a creative advertising concentration. My interest in the research of individuals crossed over, so while I enjoyed collecting information about target audiences in my advertising course, I love to conduct user research in my interactive design courses. I have an interest in developing my own personalized logo as well, so I will be watching a LinkedIn Learning course on that.</p>
-
-        <p>My projects are currently spread throughout multiple websites and description heavy. I would want to centralize the information and gather the projects onto one website for easier access. I enjoy photography and digital art as well, so I would like to incorporate those aspects into my portfolio as well, by designing project icons and showcasing my photography.</p>
-
-        <p>Given my background in advertising, I would want to work in the UX department of an advertising agency, similar to what I am doing currently with my internship. Because I am targeting and designing for employers that hire in both the UX/UI field and the advertising field, I have to ensure that I am not only including a variety of projects, but that I have skillsets applicable to both industries. Similarly, because I would want to take on future projects that involve research, I have to redesign my website in a way that demonstrates that I can present my findings in a way that is comprehensive, yet manageable to a busy individual reviewing the projects I have worked on. At the moment, my project descriptions are long and overwhelming on some websites and nonexistent on others. I seek to develop a balance between the visual and written components. Reading technically wrong has also influenced some elements of my website that I would want to change, whether that be something small like including my pronouns, or a bit more involved like improving usability by eliminating downloads.</p>
-
-        <p>I have decided to improve my website because many of the jobs I am applying to require a website when asking for a portfolio. Presenting my projects visually enables the viewer to digest the information more easily and through the presence of a well-designed website - good information architecture, usability, readability, etc. - I am applying and showcasing my skills in this field yet another time. It is one more way that I can “prove” my abilities.</p>
-
-        
-        <h2>Goals</h2>
-        
-        <ol>
-            <li>To improve my technical skills on Squarespace and learn new ones</li>
-            <li>To develop a portfolio with excellent information architecture and usability</li>
-            <li>To consider inclusivity in my design as it pertains to usability and accessibility</li>
-            <li>To establish a brand appearance through the visual designs and elements on my website</li>
-            <li>To present my projects effectively for easy interpretation by employers within different industries</li>
-        </ol>
-        
-        <h2>Audience</h2>
-        
-        <p></p>
-        
-        <p></p>
-        
-        <h2>Timeline</h2>
-        
-        <ul>
-            <li>Independent project proposal - <b>2/22</b></li>
-            <li>Complete Squarespace LinkedIn Learning courses - <b>2/25</b></li>
-            <li>Complete usability research from previous websites - <b>2/28</b></li>
-            <li>Complete a basic website prototype in Adobe XD - <b>3/1</b></li>
-            <li>Independent project certificate and screencast - <b>3/4</b></li>
-            <li>Complete all designed project icons and logo - <b>3/7</b></li>
-            <li>Independent project final files and synopsis - <b>3/11</b></li>
-        </ul>
-        
-        <h2>LinkedIn Learning Courses</h2>
-        
-        <p><a href="https://www.linkedin.com/learning/squarespace-essential-training/building-beautiful-customizable-websites-without-code?autoAdvance=true&autoSkip=false&autoplay=true&resume=true&u=50844473">Squarespace Essential Training</a></p>
-        
-        <p><a href="https://www.linkedin.com/learning/squarespace-essential-training-content-types/take-your-squarespace-site-to-the-next-level?autoAdvance=true&autoSkip=false&autoplay=true&resume=true&u=50844473">Squarespace Essential Training: Content Types</a></p>
-        
-        <p><a href="https://www.linkedin.com/learning/design-your-first-logo/discover-logo-design?autoAdvance=true&autoSkip=false&autoplay=true&resume=true&u=50844473">Squarespace Essential Training: Content Types</a></p>
-        
-        <h2>Redesign Sketches</h2>
-        
-        <p><img src="image-1.jpeg" height="400"></p>
-        
-        <h2>Current Portfolios</h2>
-        
-        <p><img src="image-2.jpg" height="300"></p>
-        
-        <p><img src="image-3.jpg" height="330"></p>
-        
-        <p><img src="image-4.jpg" height="330"></p>
-        
-        <p><img src="image-5.jpg" height="450"></p>
-        
-        <p><img src="image-6.jpg" height="450"></p>
-        
-        <p><img src="image-7.jpg" height="400"></p>
-        
-        <h2>Inspiration</h2>
-        
-        <p><img src="image-8.jpeg" height="400"></p>
-        
-        <p><img src="image-9.jpeg" height="400"></p>
-        
-        <p><img src="image-10.png" height="400"></p>
-        
-        <p><img src="image-11.jpeg" height="400"></p>
-        
-        <p><img src="image-12.png" height="400"></p>
-        
-        <p><img src="image-13.png" height="400"></p>
+        <div class="wrapper-main">
+            <div class="bar"></div>
+            <div class="logo">
+                <p><img src="images/logo.png" alt="Albatross logo."></p>
+            </div>
+            <nav>
+                <div><a href="index.html">Home</a></div>
+                <div><a href="product1.html">Outerwear</a></div>
+                <div><a href="product2.html">Sweaters &amp; Cardigans</a></div>
+                <div><a href="index.html">Dresses</a></div>
+            </nav> 
+            <div class="shopper">
+                <div>
+                    <img src="images/search.png" style="height:20px" alt="Magnifying glass icon.">
+                </div>
+                <div>
+                    <img src="images/profile.png" style="height:20px" alt="User profile icon.">
+                </div>
+                <div>
+                    <img src="images/shopping-bag.png" style="height:23px" alt="Shopping bag icon.">
+                </div>
+            </div> 
+        </div>
+        <header>
+            <div class="large-text">
+               <b>Spring Sale<br></b>
+            </div>
+            <div class="medium-text">
+                Up to 50% Off<br>
+            </div>
+            <div class="small-text">
+                Select Items
+            </div>
+        </header>
+        <div class="bar2">&nbsp;</div>
+        <div class="container">
+            <div class="peak">
+                <h1>A peak into our 2021 summer collection...</h1>
+                <p>Our new collection embraces coming closer to nature with earth tones and durable materials. Simple silhouettes and neutral tones enhance the beauty of the individual and embraces the rugged feminine who is at one with the world around her. Coming soon...</p>
+            </div>
+            <div class="collection1">
+                <img src="images/new1.jpeg" alt="A female model, wearing a brown leather top and pants, and standing in front of a neutral background.">
+                <p><b>Leather</b><br>
+                   Buttoned leather jacket<br>
+                   US $399.99</p>
+            </div>
+            <div class="collection2">
+                <img src="images/new2.jpeg" alt="A female model, wearing a brown blazer and red skirt, and sitting in front of a neutral background.">
+                <p><b>Leather</b><br>
+                   Lyocell oversize blazer<br>
+                   US $119.99</p>
+            </div>
+            <div class="collection3">
+                <img src="images/new3.jpeg" alt="A female model, wearing a brown halter dress, holding a basket bag and leaning in front of a neutral background.">
+                <p><b>Leather</b><br>
+                   Raffia basket bag<br>
+                   US $79.99</p>
+            </div>
+            <div class="collection4">
+                <img src="images/new4.jpeg" alt="A female model, wearing a light brown shirt and black pants, looking down and standing in front of a tree.">
+                <p><b>Leather</b><br>
+                   Textured wrap shirt<br>
+                   US $79.99</p>
+            </div>
+            <div class="collection5">
+                <img src="images/new5.jpeg" alt="A female model, wearing a light brown trench coat and brown pants, looking at the camera and standing in front of a wall.">
+                <p><b>Leather</b><br>
+                   Belt flowy trench<br>
+                   US $119.99</p>
+            </div>
+            <div class="collection6">
+                <img src="images/new6.jpeg" alt="A female model, wearing a light brown blazer and a brown layered skirt, looking at the camera and standing on grass.">
+                <p><b>Leather</b><br>
+                   Ruffled flowed skirt<br>
+                   US $99.99</p>
+            </div>
+            <div class="tested">
+                <h2>Tried &amp; Tested Favorites</h2>
+                <p>You cannot go wrong with these fan favorites! Jumpsuits are all the rage this season. From denim to cotton, we have it all to keep you looking cute and (more importantly) feeling comfortable.</p>
+            </div>
+            <div class="tried1">
+                <img src="images/tested1.jpeg" alt="A female model, wearing a short denim jumpsuit, looking at the camera and sitting in front of a neutral background.">
+                <p>Cotton denim jumpsuit<br>
+                   US $99.99</p>
+            </div>
+            <div class="tried2">
+                <img src="images/tested2.jpeg" alt="A female model, wearing a short white jumpsuit, looking down and standing in front of a neutral background.">
+                <p>Long denim jumpsuit<br>
+                   US $99.99</p>
+            </div>
+            <div class="tried3">
+                <img src="images/tested3.jpeg" alt="A female model, wearing a long sage colored jumpsuit, looking at the camera and standing in front of a neutral background.">
+                <p>Belted cotton jumpsuit<br>
+                   US $99.99</p>
+            </div>
+            <div class="tried4">
+                <img src="images/tested4.jpeg" alt="A female model, wearing a sage and white colored dress with thin straps and a gingham print, looking at the camera.">
+                <p>Vichy check dress<br>
+                   US $79.99</p>
+            </div>
+            <div class="email">
+                <p>SIGN UP FOR OUR NEWSLETTER</p>
+                    <h6><a href="index.html">ENTER YOUR EMAIL HERE</a></h6>
+                <div class="test"></div>
+                <div class="space"></div>
+            </div>
+        </div>
+        <div class="footer-wrapper">
+            <div class="footer-left">
+                <h4>Our Stores<br></h4>
+                <p>Catalogs</p>
+                <p>Store Events</p>
+                <p>Personal Stylist</p>
+                <p>Locations &amp; Hours</p>
+                <p>Albatross Exclusive</p>
+                <p>Curbside &amp; In Store Pickup</p>
+            </div>
+            <div class="footer-middle">
+                <h4>About Us</h4>
+                <p>Careers</p>
+                <p>Email Updates</p>
+                <p>Stores &amp; Events</p>
+                <p>Diversity &amp; Inclusion</p>
+                <p>Corporate Responsibility</p>
+                <p>Terms &amp; Conditions | <a href="privacy-policy.html">Privacy Policy</a></p>
+            </div>
+            <div class="footer-middle-right">
+                <h4>Customer Service<br></h4>
+                <p>Contact Us</p>
+                <p>Order Status</p>
+                <p>Shipping</p>
+                <p>Product Recalls</p>
+                <p>Returns &amp; Exchanges</p>
+                <p>&#169; 2021 Albatross. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <img src="images/social.png" style="height:30px" alt="The instagram, facebook, youtube and twitter icons each next to each other and in a circle.">
+            </div>
+        </div>
     </body>
 </html>
